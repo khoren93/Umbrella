@@ -16,6 +16,7 @@ let package = Package(
     .library(name: "UmbrellaMixpanel", targets: ["UmbrellaMixpanel"]),
     .library(name: "UmbrellaIntercom", targets: ["UmbrellaIntercom"]),
     .library(name: "UmbrellaFacebook", targets: ["UmbrellaFacebook"]),
+    .library(name: "UmbrellaSegment", targets: ["UmbrellaSegment"]),
   ],
   targets: [
     .target(name: "Umbrella"),
@@ -29,6 +30,7 @@ let package = Package(
     .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaIntercom", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaFacebook", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaSegment", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaTests", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaAmplitudeTests", dependencies: ["UmbrellaAmplitude"]),
     .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
@@ -40,5 +42,6 @@ let package = Package(
     .testTarget(name: "UmbrellaMixpanelTests", dependencies: ["UmbrellaMixpanel"]),
     .testTarget(name: "UmbrellaIntercomTests", dependencies: ["UmbrellaIntercom"]),
     .testTarget(name: "UmbrellaFacebookTests", dependencies: ["UmbrellaFacebook"]),
+    .testTarget(name: "UmbrellaSegmentTests", dependencies: ["UmbrellaSegment"]),
   ]
 )
