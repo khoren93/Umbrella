@@ -62,4 +62,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/UmbrellaIntercom/*.swift"
     ss.dependency "Umbrella/Core"
   end
+
+  s.subspec "Facebook" do |ss|
+    ss.source_files = "Sources/UmbrellaFacebook/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
 end
